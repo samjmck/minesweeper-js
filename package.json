@@ -1,0 +1,13 @@
+{
+  "name": "project-javascript-minesweeper-samjmckenzie",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/informaticawerktuigen2020-2021/project-javascript-minesweeper-samjmckenzie.git"
+  },
+  "author": "Sam Mckenzie",
+  "dependencies": {
+    "typescript": "^4.0.3"
+  },
+  "devDependencies": {}
+}

@@ -1,0 +1,135 @@
+body {
+    margin: 0;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #f7fafd;
+    font-family: Arial, sans-serif;
+}
+
+div.settings {
+    display: flex;
+    flex-direction: row;
+}
+div.setting {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 1em;
+}
+div.setting label {
+    margin-right: 0.6em;
+}
+div.setting input {
+    width: 3em;
+}
+
+div.game-information {
+    display: flex;
+    flex-direction: row;
+}
+div.stat {
+    margin: 0 1em;
+}
+div.stat p {
+    margin: 0.3em 0;
+}
+div.stat span {
+    font-family: monospace;
+    font-size: 1.4em;
+}
+
+div.settings, div.game-information, div.actions, main {
+    margin-bottom: 2em;
+}
+
+table#game {
+    border-spacing: 0;
+    border-collapse: collapse;
+    box-shadow: 0 5px 35px 0 rgba(55, 55, 76, 0.45);
+}
+
+table#game img {
+    width: 95%;
+}
+
+table#game td {
+    width: 1.7em;
+    height: 1.7em;
+    padding: 0;
+    background-color: #cfcfdb; /* Covered background */
+    position: relative;
+    background-clip: padding-box; /* Seems like a bug with Firefox, it doesn't show borders without static position */
+    border: 1px solid #6b7691;
+    user-select: none;
+}
+
+table#game img.flag {
+    position: absolute;
+    top: 0;
+    display: none;
+}
+
+table#game td[data-state="flagged"] img.flag {
+    display: block;
+}
+
+table#game div.field-content {
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f8; /* Uncovered background */
+    display: none;
+    z-index: 0;
+}
+
+table#game td[data-state="uncovered"] div.field-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table#game div.surrounding-mine-count {
+    font-family: monospace;
+    font-size: 1.5em;
+    text-align: center;
+    display: none;
+}
+
+table#game img.mine {
+    display: none;
+}
+
+table#game td[data-content="empty"] div.surrounding-mine-count {
+    display: block;
+}
+
+table#game td[data-content="mine"] img.mine {
+    display: block;
+}
+
+table#game td[data-surrounding-mine-count="0"] div.surrounding-mine-count {
+    display: none;
+}
+
+table#game td[data-surrounding-mine-count="1"] div.surrounding-mine-count {
+    color: #20208f;
+}
+
+table#game td[data-surrounding-mine-count="2"] div.surrounding-mine-count {
+    color: #0e8a0e;
+}
+
+table#game td[data-surrounding-mine-count="3"] div.surrounding-mine-count {
+    color: #9f0d0d;
+}
+
+table#game td[data-surrounding-mine-count="4"] div.surrounding-mine-count {
+    color: #08083c;
+}
+
+table#game td[data-surrounding-mine-count="5"] div.surrounding-mine-count {
+    color: #340203;
+}
+

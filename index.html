@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+        <meta content="utf-8" http-equiv="encoding">
+        <script type="module" src="dist/main.js" defer></script>
+        <link rel="stylesheet" type="text/css" href="stylesheet.css"> 
+    </head>
+    <body>
+        <div class="settings">
+            <div class="setting">
+                <label for="rows">Rows</label>
+                <input id="rows" name="rows" type="number" />
+            </div>
+            <div class="setting">
+                <label for="columns">Columns</label>
+                <input id="columns" name="columns" type="number" />
+            </div>
+            <div class="setting">
+                <label for="mines">Mines</label>
+                <input id="mines" name="mines" type="number" />
+            </div>
+            <div class="setting">
+                <button id="update">Update</button>
+            </div>
+        </div>
+        <div class="game-information">
+            <div class="stat">
+                <p class="stat-title">Timer</p>
+                <span id="timer">00:00</span>
+            </div>
+            <div class="stat">
+                <p class="stat-title">Clicks</p>
+                <span id="clicks">0</span>
+            </div>
+        </div>
+        <div class="actions">
+            <button id="restart">Restart</button>
+        </div>
+        <main id="main">
+
+        </main>
+    </body>
+</html>
